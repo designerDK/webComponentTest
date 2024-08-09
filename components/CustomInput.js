@@ -3,8 +3,9 @@ class CustomInput extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
-
-        const content = document.getElementById('input-template').content.cloneNode(true);
+        
+        const template = document.getElementById('input-template')
+        const content = template.content.cloneNode(true);
         this.shadowRoot.appendChild(content);
     }
 }
